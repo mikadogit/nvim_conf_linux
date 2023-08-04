@@ -25,7 +25,7 @@ HDREXTS = .h .H .hh .hpp .HPP .h++ .hxx .hp .i
 CXX = /usr/bin/g++
 
 #The C++/C compilation flags : 
-CXXFLAGS = --debug -g -O2 -Wall -Wformat -Wextra
+CXXFLAGS = -g3 -O2 -Wall -Wformat -Wextra
 #The archive builder flages : 
 ARFLAGS = rc
 
