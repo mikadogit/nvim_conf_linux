@@ -1,5 +1,4 @@
 local dap = require("dap")
-
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = 'executable',
@@ -16,8 +15,38 @@ dap.configurations.cpp = {
     stopAtEntry = true,
     cwd = '${workspaceFolder}',
     program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/build/', 'file')
     end,
   },
 }
 dap.configurations.c = dap.configurations.cpp
+
+---- KEY MAPPING 
+vim.keymap.set('n', "<F4>", function() require('dap').run_last()end)
+------ eclipse like
+vim.keymap.set('n', "<F5>", function() require('dap').step_into()end)
+vim.keymap.set('n', "<F6>", function() require('dap').step_over()end)
+vim.keymap.set('n', "<F7>", function() require('dap').step_out()end)
+vim.keymap.set('n', "<F8>", function() require('dap').continue()end)
+------ option 
+vim.keymap.set('n', "<leader>bm", function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))end)
+vim.keymap.set('n', "<leader>bc", function() require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))end)
+vim.keymap.set('n', "<leader>b", function() require('dap').toggle_breakpoint()end)
+vim.keymap.set('n', "<leader>cb", function() require('dap').clear_breakpoints()end)
+
+vim.keymap.set('n', '<Leader>pf', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.frames)
+end)
+vim.keymap.set('n', '<Leader>pe', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.expression)
+end)
+vim.keymap.set('n', '<Leader>ps', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.scopes)
+end)
+vim.keymap.set('n', '<Leader>pt', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.threads)
+end)
