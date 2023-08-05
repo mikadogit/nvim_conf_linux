@@ -36,7 +36,7 @@ local plugins = {
       require("core.utils").load_mappings("dap")
     end
   },
-  {
+{
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
     opts = function()
@@ -59,7 +59,19 @@ local plugins = {
         "cpptools",
       }
     }
-  }
-
+  },
+  {
+    'stevearc/aerial.nvim',
+    event = "VeryLazy",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+       "nvim-treesitter/nvim-treesitter",
+       "nvim-tree/nvim-web-devicons"
+    },
+    config = function ()
+      require "custom.configs.aerial"
+    end
+  },
 }
 return plugins

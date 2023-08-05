@@ -1,0 +1,10 @@
+-std=c++17
+-Wall
+-Iinclude/
+-Iinclude/glad/
+-Iinclude/KHR/
+-I/usr/include/GL/
+-I/usr/include/GLFW/
+-I/usr/include/GLEW/
+-I/usr/include/glm/
+-I../common/
