@@ -1,3 +1,0 @@
-export exec_name="main.exe" 
-export windows_bin_path="C:/Users/lbo/Downloads/build/"
-export wsl_path="/mnt/c/msys64/mingw64/bin/"

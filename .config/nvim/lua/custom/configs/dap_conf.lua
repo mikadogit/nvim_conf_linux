@@ -25,10 +25,18 @@ dap.configurations.cpp = {
     MIMode = 'gdb',
     miDebuggerPath = vim.fn.exepath('gdb'),
     miDebuggerServerAddress = "127.0.0.1:2000",
+    --args = 
+    postRemoteConnectCommands =
+    {
+      {
+        text = "source ${workspaceFolder}/.gdbinit",
+      },
+    },
+       -- miDebuggerArgs = "",
     cwd = '${workspaceFolder}',
     program = function()
       require"custom.configs.launch_gdb_mingw"
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/build/', 'file')
+      return wsl_bin_path..exec_name
     end,
   },
 }
@@ -62,4 +70,4 @@ dap.configurations.c = dap.configurations.cpp
 --vim.keymap.set('n', '<Leader>pt', function()
 --  local widgets = require('dap.ui.widgets')
 --  widgets.centered_float(widgets.threads)
---end)
+--end)r
