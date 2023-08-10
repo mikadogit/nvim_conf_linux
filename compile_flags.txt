@@ -1,5 +1,6 @@
 -std=c++17
 -Wall
+-xc++
 -Iinclude/
 -Iinclude/glad/
 -Iinclude/KHR/
