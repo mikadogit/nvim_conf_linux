@@ -1,1 +1,1 @@
-b main.cpp:32
+b main
