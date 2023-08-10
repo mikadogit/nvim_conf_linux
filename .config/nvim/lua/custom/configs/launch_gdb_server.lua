@@ -20,9 +20,9 @@ local function lire_fichier_config(chemin_fichier)
 
  -- Maintenant, vous pouvez accéder aux valeurs à l'aide des noms de variable
 exec_name = configuration.exec_name
-windows_bin_path = configuration.windows_bin_path
-wsl_bin_path = configuration.wsl_bin_path
-wsl_gdb_path = configuration.wsl_gdb_path
+server_bin_path = configuration.server_bin_path
+local_bin_path = configuration.local_bin_path
+gdb_path = configuration.gdb_path
 
-os.execute(wsl_gdb_path.."gdbserver.exe 127.0.0.1:2000 "..windows_bin_path..exec_name.." & ")
+os.execute(gdb_path.."gdbserver.exe 127.0.0.1:2000 "..server_bin_path..exec_name.." & ")
 vim.wait(500)

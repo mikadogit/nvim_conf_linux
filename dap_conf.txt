@@ -1,4 +1,4 @@
 exec_name="main.exe"
-windows_bin_path="C:/Users/lbo/Downloads/build/"
-wsl_bin_path="/mnt/c/Users/lbo/Downloads/build/"
-wsl_gdb_path="/mnt/c/msys64/mingw64/bin/"
+server_bin_path="C:/Users/lbo/Downloads/build/"
+local_bin_path="/mnt/c/Users/lbo/Downloads/build/"
+gdb_path="/mnt/c/msys64/mingw64/bin/"

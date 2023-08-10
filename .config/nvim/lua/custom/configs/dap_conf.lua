@@ -19,7 +19,7 @@ dap.configurations.cpp = {
     end,
   },
   {
-    name = 'GDB mingw64 server',
+    name = 'GDB Server (dap_conf.txt)',
     type = 'cppdbg',
     request = 'launch',
     MIMode = 'gdb',
@@ -35,8 +35,8 @@ dap.configurations.cpp = {
        -- miDebuggerArgs = "",
     cwd = '${workspaceFolder}',
     program = function()
-      require"custom.configs.launch_gdb_mingw"
-      return wsl_bin_path..exec_name
+      require"custom.configs.launch_gdb_server"
+      return local_bin_path..exec_name
     end,
   },
 }
