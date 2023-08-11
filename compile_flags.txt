@@ -1,5 +1,7 @@
 -std=c++17
 -Wall
+-Wformat 
+-Wextra
 -xc++
 -Iinclude/
 -Iinclude/glad/
