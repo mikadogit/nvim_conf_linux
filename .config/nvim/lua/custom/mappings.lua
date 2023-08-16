@@ -62,8 +62,11 @@ M.dap = {
     ["<leader>pp"] = {
       "<cmd> echo expand('%:p')<CR>",
       "Print current file path",
-    }
-
+    },
+    ["<leader>ll"] = {
+      "<cmd> TroubleToggle<CR>",
+      "List Warnings Errors ...",
+    },
     -- ["<leader>dr"] = {
    --   "<cmd> DapContinue <CR>",
    --   "Start or continue the debugger",

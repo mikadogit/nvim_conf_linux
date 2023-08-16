@@ -1,4 +1,4 @@
-1er etape :  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+1er etape :  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim (pas obligatoire, on peux juste copierles folders et eviter les probleme d'évolution nvchad)
 installer ripgrep et xclip
 installer python3-dev et env
 TsInstall c et cpp et python
