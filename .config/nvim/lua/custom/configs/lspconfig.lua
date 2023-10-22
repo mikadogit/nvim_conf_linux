@@ -13,5 +13,6 @@ lspconfig.clangd.setup {
     "clangd",
     "--offset-encoding=utf-16",
     "--header-insertion=never",
+    "--query-driver=**"
   },
 }
