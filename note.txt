@@ -5,3 +5,5 @@ TsInstall c et cpp et python
 
 dap_conf.txt utile uniquement si GDB Server 
 attention , Lazy peut faire evoluer l'environnement donc les fichiers de conf peuvent varier, faire un diff sur evolution
+
+Penser à installer sudo apt install g++-12
