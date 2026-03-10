@@ -2,7 +2,7 @@ CF : https://nvchad.com/docs/quickstart/install/ (ne pas faire l'install de tree
 
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
-supprimer le contenue de .cofig/nvim et remplacer par le mien
+supprimer le contenu de .config/nvim et remplacer par le mien
 
 installer ripgrep et xclip
 installer python3-dev et env
